@@ -11,9 +11,9 @@ has been more or less directly translated into Javascript.
 
 Typeout is inspired by:
 
-* Markdown http://daringfireball.net/projects/markdown/
-* Textile http://textism.com/tools/textile/
-* Creole http://www.wikicreole.org/
+* Markdown http://daringfireball.net/projects/markdown
+* Textile http://textism.com/tools/textile
+* Creole http://www.wikicreole.org
 
 *Author*::    Connor McKay (mailto:connor@verticalforest.com)
 *Version*::   1.4.1 (2010-7-8)

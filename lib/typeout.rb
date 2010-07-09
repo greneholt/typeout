@@ -1,9 +1,9 @@
 require 'sanitize'
 
 class Typeout < String
-  include ERB::Util
+  VERSION = '1.4.1'
   
-  include HTML5
+  include ERB::Util
   
   def self.convert(text)
     self.new(text.to_s).to_html
@@ -37,7 +37,7 @@ class Typeout < String
   end
   
   def sanitize_html(text)
-    HTMLParser.parse_fragment(text, :tokenizer => HTMLSanitizer).to_s
+    Sanitize.clean(text, Sanitize::Config::RELAXED)
   end
   
   def clean_whitespace(text)
