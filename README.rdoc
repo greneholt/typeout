@@ -11,9 +11,9 @@ has been more or less directly translated into Javascript.
 
 Typeout is inspired by:
 
-* [Markdown](http://daringfireball.net/projects/markdown/)
-* [Textile](http://textism.com/tools/textile/)
-* [Creole](http://www.wikicreole.org/)
+* Markdown http://daringfireball.net/projects/markdown/
+* Textile http://textism.com/tools/textile/
+* Creole http://www.wikicreole.org/
 
 *Author*::    Connor McKay (mailto:connor@verticalforest.com)
 *Version*::   1.4.1 (2010-7-8)
@@ -35,70 +35,70 @@ Javascript version:
 
 Latest stable release:
 
-	gem install typeout
+  gem install typeout
 
 == Usage
 
 Ruby:
 
-	Typeout.convert(text)
+  Typeout.convert(text)
 
 Javascript:
 
-	var text = new TypeOut(text);
-	text.toHTML();
+  var text = new TypeOut(text);
+  text.toHTML();
 
 == Syntax
 
-	---
-	Code block
-	---
+  ---
+  Code block
+  ---
 
-	= Level 1 Header
-	== Level 2 Header, etc.
+  = Level 1 Header
+  == Level 2 Header, etc.
 
-	* Unordered
-	* List
+  * Unordered
+  * List
 
-	# Ordered
-	# List
+  # Ordered
+  # List
 
-	* Multilevel
-	* Unordered
-	** List
-	** With
-	*** Multiple
-	* Asterisks
+  * Multilevel
+  * Unordered
+  ** List
+  ** With
+  *** Multiple
+  * Asterisks
 
-	* Mixed
-	* Unordered
-	*# And
-	*# Ordered
-	*# Nested
-	* List
+  * Mixed
+  * Unordered
+  *# And
+  *# Ordered
+  *# Nested
+  * List
 
-	~~~
-	Four score and seven years ago, blockquotes use at least three tildes at
-	beginning and end.
-	~~~
+  ~~~
+  Four score and seven years ago, blockquotes use at least three tildes at
+  beginning and end.
+  ~~~
 
-	Average paragraph containing *bold text*, _italic text_, and a
-	[link to google](http://google.com) and some `inline code`.
+  Average paragraph containing *bold text*, _italic text_, and a
+  [link to google](http://google.com) and some `inline code`.
 
-	Another paragraph with a [link](http://google.com):button with a class of "button".
+  Another paragraph with a [link](http://google.com):button with a class of "button".
 
-	Images
+  Images
 
-	!(http://example.com/an_image.png)
+  !(http://example.com/an_image.png)
 
-	!(http://example.com/logo.png)[An image with optional alt text]
+  !(http://example.com/logo.png)[An image with optional alt text]
 
 
-	Name: Jane Alice
-	Age: 25
-	Favorite food: Pizza
+  Name: Jane Alice
+  Age: 25
+  Favorite food: Pizza
 
-	Text at the beginning of a line followed by a colon will be automatically bolded.
+  Text at the beginning of a line followed by a colon will be automatically bolded.
 
 Newlines in the middle of a paragraph are preserved in Typeout, meaning
 that a paragraph cannot be split across multiple lines.
