@@ -1,0 +1,129 @@
+= Typeout
+
+Typeout is a plain text formatting language designed around two goals:
+
+* Syntax simple enough for computer illiterate users
+* Easily typed into an HTML textbox, meaning no tabs or extra spaces.
+
+It is also a set of libraries in different programming languages for converting
+Typeout formatted text into HTML. The primary implementation is in Ruby, which
+has been more or less directly translated into Javascript.
+
+Typeout is inspired by:
+
+* [Markdown](http://daringfireball.net/projects/markdown/)
+* [Textile](http://textism.com/tools/textile/)
+* [Creole](http://www.wikicreole.org/)
+
+*Author*::    Connor McKay (mailto:connor@verticalforest.com)
+*Version*::   1.4.1 (2010-7-8)
+*Copyright*:: Copyright (c) 2007-2010 Connor McKay. All rights reserved.
+*License*::   MIT License (http://opensource.org/licenses/mit-license.php)
+*Website*::   http://github.com/greneholt/typeout
+
+== Requires
+
+Ruby version:
+
+* Sanitize >= 1.2.1
+
+Javascript version:
+
+* MooTools Core >= 1.2.4
+
+== Installation
+
+Latest stable release:
+
+	gem install typeout
+
+== Usage
+
+Ruby:
+
+	Typeout.convert(text)
+
+Javascript:
+
+	var text = new TypeOut(text);
+	text.toHTML();
+
+== Syntax
+
+	---
+	Code block
+	---
+
+	= Level 1 Header
+	== Level 2 Header, etc.
+
+	* Unordered
+	* List
+
+	# Ordered
+	# List
+
+	* Multilevel
+	* Unordered
+	** List
+	** With
+	*** Multiple
+	* Asterisks
+
+	* Mixed
+	* Unordered
+	*# And
+	*# Ordered
+	*# Nested
+	* List
+
+	~~~
+	Four score and seven years ago, blockquotes use at least three tildes at
+	beginning and end.
+	~~~
+
+	Average paragraph containing *bold text*, _italic text_, and a
+	[link to google](http://google.com) and some `inline code`.
+
+	Another paragraph with a [link](http://google.com):button with a class of "button".
+
+	Images
+
+	!(http://example.com/an_image.png)
+
+	!(http://example.com/logo.png)[An image with optional alt text]
+
+
+	Name: Jane Alice
+	Age: 25
+	Favorite food: Pizza
+
+	Text at the beginning of a line followed by a colon will be automatically bolded.
+
+Newlines in the middle of a paragraph are preserved in Typeout, meaning
+that a paragraph cannot be split across multiple lines.
+
+Plain html can be preserved intact by surrounding it in [html], [/html]
+pairs. It will be sanitized using the Sanitize library in the Ruby version.
+
+== License
+
+Copyright (c) 2010 Connor McKay
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
