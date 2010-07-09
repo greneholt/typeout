@@ -5,11 +5,13 @@ Gem::Specification.new do |s|
   s.authors = ["Connor McKay"]
   s.email = ["connor@verticalforest.com"]
   s.summary = "Dead simple plain text to HTML converter"
+  s.homepage = "http://github.com/greneholt/typeout"
   s.files = ["README.rdoc", "LICENSE", "lib/typeout.js", "lib/typeout.rb"]
   
   s.required_rubygems_version = ">= 1.3.6"
+  s.rubyforge_project = "typeout"
   
   s.add_runtime_dependency "sanitize"
   
-  s.require_paths = "lib"
+  s.require_paths = ["lib"]
 end
