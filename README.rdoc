@@ -33,9 +33,13 @@ Javascript version:
 
 == Installation
 
-Latest stable release:
+Gem:
 
   gem install typeout
+
+Rails plugin:
+
+  ./script/plugin install git://github.com/greneholt/typeout.git
 
 == Usage
 
