@@ -49,7 +49,7 @@ Ruby:
 
 Javascript:
 
-  var text = new TypeOut(text);
+  var text = new Typeout(text);
   text.toHTML();
 
 == Syntax
