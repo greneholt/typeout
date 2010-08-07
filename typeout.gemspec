@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "typeout"
-  s.version = "1.4.2"
+  s.version = "1.4.3"
   s.date = "2010-7-18"
   s.authors = ["Connor McKay"]
   s.email = ["connor@verticalforest.com"]
