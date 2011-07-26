@@ -1,15 +1,17 @@
 require 'sanitize'
 
 class Typeout < String
-  VERSION = '1.4.2'
+  VERSION = '1.4.5'
   
   include ERB::Util
   
-  def self.convert(text)
-    self.new(text.to_s).to_html
+  def self.convert(text, sanitize = true)
+    self.new(text.to_s).to_html(sanitize)
   end
   
-  def to_html
+  def to_html(sanitize = true)
+    @sanitize = sanitize
+    
     text = self.dup
     
     text = clean_whitespace text
@@ -37,7 +39,11 @@ class Typeout < String
   end
   
   def sanitize_html(text)
-    Sanitize.clean(text, Sanitize::Config::RELAXED)
+    if @sanitize
+      Sanitize.clean(text, Sanitize::Config::RELAXED)
+    else
+      text
+    end
   end
   
   def clean_whitespace(text)

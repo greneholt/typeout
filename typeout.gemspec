@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = "typeout"
-  s.version = "1.4.3"
-  s.date = "2010-7-18"
+  s.version = "1.4.5"
+  s.date = "2011-07-26"
   s.authors = ["Connor McKay"]
   s.email = ["connor@verticalforest.com"]
   s.summary = "Dead simple plain text to HTML converter"
