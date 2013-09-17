@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.summary = "Dead simple plain text to HTML converter"
   s.homepage = "http://github.com/greneholt/typeout"
   s.files = ["README.rdoc", "LICENSE", "lib/typeout.js", "lib/typeout.rb"]
+  s.license = 'MIT'
 
   s.required_rubygems_version = ">= 1.3.5"
   s.rubyforge_project = "typeout"
